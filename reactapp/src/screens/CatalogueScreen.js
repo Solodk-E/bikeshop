@@ -1,8 +1,13 @@
 import React from 'react'
+import CatalogueMenu from '../components/CatalogueMenu'
+
 
 function CatalogueScreen() {
   return (
-    <div>CatalogueScreen</div>
+    <div>
+      <CatalogueMenu/>
+      CatalogueScreen
+    </div>
   )
 }
 

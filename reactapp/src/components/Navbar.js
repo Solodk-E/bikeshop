@@ -9,6 +9,7 @@ function Navbar() {
         <Link to="/">
         <img id="logo"src="bike-logo.svg"/>
         </Link>
+        <div>The Bike Shop Experience</div>
         </div>
       <div id="navButtonList">
         <button className="navButton">

@@ -7,7 +7,9 @@ import BasketScreen from './screens/BasketScreen';
 import AccountScreen from './screens/AccountScreen';
 import WishListScreen from './screens/WishListScreen';
 import Navbar from './components/Navbar';
-import IdentitySubScreen from './screens/IdentitySubScreen'
+import IdentitySubScreen from './screens/IdentitySubScreen';
+import BuyingOrdersSubScreen from './screens/BuyingOrdersSubScreen';
+
 
 
 function App() {
@@ -21,6 +23,7 @@ function App() {
           <Route path='/basketscreen' element={<BasketScreen/>}/>
           <Route path='/accountscreen' element={<AccountScreen/>}>
             <Route path="/accountscreen/identitysubscreen" element={<IdentitySubScreen/>}/>
+            <Route path="/accountscreen/buyingorderssubscreen" element={<BuyingOrdersSubScreen/>}/>
           </Route>
           <Route path='/wishlistscreen' element={<WishListScreen/>}/>
 

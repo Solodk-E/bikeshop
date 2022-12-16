@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
+import { useSelector } from 'react-redux';
 import CatalogueCard from '../components/CatalogueCard';
+
 
 var data=[
   {name:"BIK045", image:"./bike-1.jpg" , price: 679},
@@ -10,9 +12,13 @@ var data=[
   {name:"NASAY", image:"./bike-6.jpg" , price: 1399}
 ]
 
-function CatalogueScreen() {
+function CatalogueScreen(props) {
 
-  const [dataBikes, setDataBikes]=useState(data);
+  // const [dataBikes, setDataBikes]=useState(data);
+
+  const dataBikes = useSelector(state=>state.articles)
+
+console.log(dataBikes)
 
   var displayBikeCards=dataBikes.map(element=>{
     return(

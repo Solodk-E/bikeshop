@@ -1,9 +1,16 @@
 import React, {useState} from 'react';
+import { useSelector } from 'react-redux';
 import CatalogueCard from '../components/CatalogueCard';
 
 function WishListScreen() {
 
-  const [wishList, setWishList]=useState([])
+  // const [wishList, setWishList]=useState([
+  //   {name:"ZOO47", image:"./bike-2.jpg" , price: 799}
+
+  // ])
+
+    const wishList =useSelector(state=>state.wishedArticles)
+    
 
   var wishListDisplay=wishList.map(element =>{
     return(
@@ -19,7 +26,10 @@ function WishListScreen() {
 
 
   return (
-    <div>WishListScreen</div>
+    <div>WishListScreen
+      {wishListDisplay}
+    </div>
+
   )
 }
 
